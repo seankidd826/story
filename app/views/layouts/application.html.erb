@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Story</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <section id="home" data-type="background" data-speed="10">
+    <h1 class="mainArticle text-center">帶一份 來自家的便當</h1><br>
+    <p class="mainParagraph text-center">向媽媽們預訂豐盛、均衡的午餐，給忙碌又總是外食的你，更有溫度的選擇</p>
+  </section>
+
+  <section id="order">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 todayMenu">
+          <h2>菜單</h2>
+          <ul class="list-inline">
+            <li>Lorem ipsum dolor sit amet.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li><br>
+            <li>Lorem ipsum dolor sit amet.</li><br>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6 myOder">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">我要帶便當</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <h2 class="text-center">帶便當好輕鬆</h2>
+          <p class="text-center">簡單3步驟</p>
+          <%= image_tag("info.png", class: "img-responsive text-center storyInfo", alt: "bento banto") %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<%= yield %>
+
+<script>
+  $(document).ready(function(){
+    var $window = $(window);
+      $('section[data-type="background"]').each(function(){
+          var $bgobj = $(this); // assigning the object
+
+          $(window).scroll(function() {
+              var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+
+              // Put together our final background position
+              var coords = '50% '+ yPos + 'px';
+
+              // Move the background
+              $bgobj.css({ backgroundPosition: coords });
+          });
+      });
+  });
+</script>
+
+</body>
+</html>

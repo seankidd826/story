@@ -1,0 +1,21 @@
+<%= form_for @momstory, :url => momstory_path(@momstory) do |f| %>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+<br>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <%= f.label :content2 %>
+  <%= f.text_area :content2 %>
+  <%= f.label :content3 %>
+  <%= f.text_area :content3 %>
+  <%= f.label :content4 %>
+  <%= f.text_area :content4 %>
+
+  <%= check_box_tag "destroy_pic", "1" %>Delete Picture
+
+  <%= f.submit "Update" %>
+
+  <%= link_to 'Back', momstories_path %>
+
+
+  <% end %>

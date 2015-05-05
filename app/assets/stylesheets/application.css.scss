@@ -1,0 +1,77 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+#home {
+  background: image-url("mainBanner_WEB.JPG") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 750px;
+  height: 750px;
+}
+
+#home .mainArticle {
+  height: 400px;
+  position: absolute;
+  margin-top: 250px;
+  width: 100%;
+  font-size: 72px;
+  color: white;
+  text-shadow: #444 0 1px 1px;
+}
+
+#home .mainParagraph {
+  margin-top: 350px;
+  position: absolute;
+  width: 100%;
+  font-size: 24px;
+  color: white;
+  text-shadow: #444 0 1px 1px;
+}
+
+.storyImg {
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+}
+.footer {
+  min-height: 150px;
+  background-color: #FFA500;
+  padding-bottom: 20px;
+}
+.momCont1 {
+  font-size: 30px;
+  color: white;
+}
+.storyCon {
+  font-size: 20px;
+}
+
+.momsTalk {
+  position:relative;
+  padding:60px;
+  margin:1em 0 1em;
+  color:#000;
+  background:#FDBA2C;
+  border-radius:10px;
+}
+.momsTalk:after{
+  content: "";
+  position: absolute;
+  border-style: solid;
+  display: block;
+  width: 0;
+}
+.right {
+  margin-right: 50px;
+  background: #FDBA2C;
+}
+.momsTalk.right:after{
+  top: 16px;
+  right: -50px;
+  bottom: auto;
+  left: auto;
+  border-width: 10px 0 10px 50px;
+  border-color: transparent #FDBA2C;
+}

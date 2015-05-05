@@ -1,0 +1,29 @@
+<h1>New!</h1>
+
+<%= form_for @momstory, :url => momstories_path do |f| %>
+
+  <p>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <%= f.label :content2 %>
+    <%= f.text_area :content2 %>
+    <%= f.label :content3 %>
+    <%= f.text_area :content3 %>
+    <%= f.label :content4 %>
+    <%= f.text_area :content4 %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+  <p>
+    <%= link_to 'Back', momstories_path %>
+  </p>
+
+<% end %>

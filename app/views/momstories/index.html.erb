@@ -1,0 +1,44 @@
+<%= link_to "Upload", new_momstory_path %>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <h2 class="text-center">媽媽們的料理故事</h2>
+        <p class="text-center">給孩子的愛</p>
+      </div>
+    </div>
+  </div>
+
+<% @momstories.each do |momstory| %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+        <div class="momsTalk text-center right">
+          <p class="momCont1"><%= momstory.content %></p>
+        </div>
+        <div class="text-center">
+          <%= momstory.content2 %>
+        </div>
+        <div class="text-center">
+          <%= momstory.content3 %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+
+          <%= link_to image_tag( momstory.image.url(:small), :class => "img-circle img-responsive") %>
+          <%= link_to 'Edit', edit_momstory_path(momstory) %>
+          <%= link_to 'Delete', momstory_path(momstory), :method => :delete %>
+          <br>
+          <p class="storyCon"><%= momstory.content4 %></p>
+      </div>
+<% end %>
+
+      <div class="col-xs-12 text-center">
+        <a href="https://www.facebook.com/pages/Bento-Banto-%E5%B8%B6%E4%BE%BF%E7%95%B6/926937394017505" class="btn btn-primary btn-lg fa fa-facebook-official"> 更多家與料理故事</a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
